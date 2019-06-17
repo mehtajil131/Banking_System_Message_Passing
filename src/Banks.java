@@ -1,7 +1,28 @@
-public class Banks {
+public class Banks extends Thread {
 
     public int have_amt;
     public String bank_name;
+    Master masterProcess;
+
+    public Banks () {
+
+    }
+
+
+    public Banks (String bname, int amt) {
+
+        this.have_amt = amt;
+        this.bank_name = bname;
+
+    }
+
+    public Banks (String bname, int amt, Master m) {
+
+        this.have_amt = amt;
+        this.bank_name = bname;
+        this.masterProcess = m;
+
+    }
 
     public int getHave_amt() {
         return have_amt;
@@ -19,14 +40,9 @@ public class Banks {
         this.bank_name = bank_name;
     }
 
-    public Banks () {
+    @Override
+    public void run() {
 
-    }
-
-    public Banks (String bname, int amt) {
-
-        this.have_amt = amt;
-        this.bank_name = bname;
 
     }
 }

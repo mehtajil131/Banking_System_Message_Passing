@@ -33,18 +33,18 @@ public class ReadInput {
             System.out.println("Error reading file");
         }
 
-/*        for(int i=0;i<bank_strings.size();i++) {
+        System.out.println("** Bank and financial resources **");
+
+        for(int i=0;i<bank_strings.size();i++) {
 
             Banks temp = new Banks();
             temp = bank_strings.get(i);
-            System.out.println(temp.bank_name + "    " + temp.have_amt);
-        }*/
+            System.out.println(temp.bank_name + ": " + temp.have_amt);
+        }
 
             return  bank_strings;
 
     }
-
-
 
 
     public ArrayList<Customers> get_customer_list (String cust_fname, ArrayList<String> banks_list) {
@@ -74,12 +74,19 @@ public class ReadInput {
             System.out.println("Error reading file");
         }
 
-/*        for(int i=0;i<cust_list.size();i++) {
+        System.out.println("** Customers and loan objectives**");
+
+        for(int i=0;i<cust_list.size();i++) {
 
             Customers temp = new Customers();
             temp = cust_list.get(i);
-            System.out.println(temp.cust_name + "    " + temp.want_amt + temp.list_banks.get(0).bank_name + temp.list_banks.get(1).bank_name
-                    + temp.list_banks.get(2).bank_name);
+            System.out.println(temp.cust_name + ": " + temp.want_amt);
+        }
+/*       for(int i=0;i<cust_list.size();i++) {
+
+            Customers temp = new Customers();
+            temp = cust_list.get(i);
+            System.out.println(temp.cust_name + ":" + temp.want_amt + temp.list_banks );
         }*/
 
 
